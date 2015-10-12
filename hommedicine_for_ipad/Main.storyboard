@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oki-gB-3gD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dettaglio View Controller-->
+        <scene sceneID="vnc-GZ-YsP">
+            <objects>
+                <viewController id="AUt-6o-zJX" customClass="DettaglioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FkP-2O-7N6"/>
+                        <viewControllerLayoutGuide type="bottom" id="btM-lW-p8H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q4p-ME-q7h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ye-31-T8C">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCX-1a-sLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Lista medicinali" id="F5q-k2-KH7">
+                                                <barButtonItem key="leftBarButtonItem" title="Back" id="Zzw-Y1-59K">
+                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fct-0w-7FR">
+                                                        <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="&lt;&lt;"/>
+                                                        <connections>
+                                                            <action selector="Back:" destination="AUt-6o-zJX" eventType="touchUpInside" id="neX-h1-ad5"/>
+                                                        </connections>
+                                                    </button>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="Save" id="xyc-Zk-ozR">
+                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tas-VR-Hdf">
+                                                        <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <state key="normal" title="Salva"/>
+                                                        <connections>
+                                                            <action selector="Save:" destination="AUt-6o-zJX" eventType="touchUpInside" id="JJ0-8h-ogT"/>
+                                                        </connections>
+                                                    </button>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WCX-1a-sLf" secondAttribute="trailing" id="0Sx-Ck-xt3"/>
+                                    <constraint firstItem="WCX-1a-sLf" firstAttribute="centerX" secondItem="1ye-31-T8C" secondAttribute="centerX" id="Zux-7k-6RB"/>
+                                    <constraint firstItem="WCX-1a-sLf" firstAttribute="leading" secondItem="1ye-31-T8C" secondAttribute="leading" id="fgf-k9-aVl"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome medicinale:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHV-Wc-as1">
+                                <rect key="frame" x="50" y="100" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32n-qt-rZb">
+                                <rect key="frame" x="50" y="129" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-jG-dFj">
+                                <rect key="frame" x="50" y="225" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="465756745.82107598">
+                                    <!--2015-10-05 16:52:25 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="it_IT"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ye-31-T8C" secondAttribute="trailing" constant="-20" id="293-V0-ZAR"/>
+                            <constraint firstItem="1ye-31-T8C" firstAttribute="leading" secondItem="q4p-ME-q7h" secondAttribute="leadingMargin" constant="-20" id="cOL-YB-m4C"/>
+                            <constraint firstItem="1ye-31-T8C" firstAttribute="centerX" secondItem="q4p-ME-q7h" secondAttribute="centerX" id="fwG-VH-CC2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nominativo" destination="32n-qt-rZb" id="Qi5-73-pWA"/>
+                        <outlet property="scadenza" destination="zdN-jG-dFj" id="fgJ-8M-Nxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDF-pc-M7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="362"/>
+        </scene>
+        <!--Lista medicinali-->
+        <scene sceneID="kZh-Hk-9ED">
+            <objects>
+                <tableViewController id="1dY-Jk-geX" customClass="hommedicineTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0E2-QE-ile">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gvi-VX-qSj" detailTextLabel="HoH-p6-k1A" style="IBUITableViewCellStyleValue1" id="BqF-j6-kNG">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BqF-j6-kNG" id="X0l-DF-cXB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gvi-VX-qSj">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HoH-p6-k1A">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AUt-6o-zJX" kind="presentation" identifier="seg2" id="gfc-NN-Mfz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1dY-Jk-geX" id="AVU-hr-wBO"/>
+                            <outlet property="delegate" destination="1dY-Jk-geX" id="Zwf-7p-zJb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lista medicinali" id="B2c-Ud-wmA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fhX-cM-Do0">
+                            <connections>
+                                <segue destination="AUt-6o-zJX" kind="presentation" id="s05-Cs-EXX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="736-ob-WvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wOu-nW-Q3p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oki-gB-3gD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7xi-PZ-TZT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1dY-Jk-geX" kind="relationship" relationship="rootViewController" id="CZ1-ZD-b9Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhE-Lq-gW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="367"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gfc-NN-Mfz"/>
+    </inferredMetricsTieBreakers>
+</document>
